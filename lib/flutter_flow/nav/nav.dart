@@ -72,13 +72,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const VotingPageWidget() : const SignInWidget(),
+          appStateNotifier.loggedIn ? const DashboardWidget() : const SignInWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const VotingPageWidget() : const SignInWidget(),
+              appStateNotifier.loggedIn ? const DashboardWidget() : const SignInWidget(),
         ),
         FFRoute(
           name: 'SignIn',
@@ -86,24 +86,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const SignInWidget(),
         ),
         FFRoute(
-          name: 'VotingPage',
-          path: '/VotingPage',
-          builder: (context, params) => VotingPageWidget(
-            voteName: params.getParam(
-              'voteName',
-              ParamType.String,
-            ),
-          ),
+          name: 'Dashboard',
+          path: '/dashboard',
+          builder: (context, params) => const DashboardWidget(),
         ),
         FFRoute(
-          name: 'CreateAccountChooseRole',
-          path: '/createAccountChooseRole',
-          builder: (context, params) => const CreateAccountChooseRoleWidget(),
+          name: 'CampaignPage',
+          path: '/campaignPage',
+          builder: (context, params) => const CampaignPageWidget(),
         ),
         FFRoute(
-          name: 'OrganiserDashboard',
-          path: '/organiserDashboard',
-          builder: (context, params) => const OrganiserDashboardWidget(),
+          name: 'CreateCampaign',
+          path: '/createCampaign',
+          builder: (context, params) => const CreateCampaignWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

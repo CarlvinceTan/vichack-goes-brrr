@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'voting_page_widget.dart' show VotingPageWidget;
+import 'campaign_page_widget.dart' show CampaignPageWidget;
 import 'package:flutter/material.dart';
 
-class VotingPageModel extends FlutterFlowModel<VotingPageWidget> {
+class CampaignPageModel extends FlutterFlowModel<CampaignPageWidget> {
   @override
   void initState(BuildContext context) {}
 

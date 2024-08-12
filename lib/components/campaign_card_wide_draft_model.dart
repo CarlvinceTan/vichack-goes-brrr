@@ -1,9 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'organiser_dashboard_widget.dart' show OrganiserDashboardWidget;
+import 'campaign_card_wide_draft_widget.dart' show CampaignCardWideDraftWidget;
 import 'package:flutter/material.dart';
 
-class OrganiserDashboardModel
-    extends FlutterFlowModel<OrganiserDashboardWidget> {
+class CampaignCardWideDraftModel
+    extends FlutterFlowModel<CampaignCardWideDraftWidget> {
   @override
   void initState(BuildContext context) {}
 
