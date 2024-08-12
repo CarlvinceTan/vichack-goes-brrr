@@ -986,7 +986,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                                             return;
                                                           }
 
-                                                          context.goNamedAuth(
+                                                          context.pushNamedAuth(
                                                               'Dashboard',
                                                               context.mounted);
                                                         },
@@ -1009,8 +1009,9 @@ class _SignInWidgetState extends State<SignInWidget>
                                                                       0.0,
                                                                       0.0,
                                                                       0.0),
-                                                          color:
-                                                              const Color(0xFF2F8CE5),
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary,
                                                           textStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)

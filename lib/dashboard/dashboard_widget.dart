@@ -207,10 +207,19 @@ class _DashboardWidgetState extends State<DashboardWidget>
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 children: [
-                  wrapWithModel(
-                    model: _model.campaignCardModel1,
-                    updateCallback: () => setState(() {}),
-                    child: const CampaignCardWidget(),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.pushNamed('CampaignPage');
+                    },
+                    child: wrapWithModel(
+                      model: _model.campaignCardModel1,
+                      updateCallback: () => setState(() {}),
+                      child: const CampaignCardWidget(),
+                    ),
                   ),
                   wrapWithModel(
                     model: _model.campaignCardModel2,
@@ -245,8 +254,8 @@ class _DashboardWidgetState extends State<DashboardWidget>
                       color: FlutterFlowTheme.of(context).primaryText,
                       size: 24.0,
                     ),
-                    onPressed: () {
-                      print('IconButton pressed ...');
+                    onPressed: () async {
+                      context.pushNamed('CreateCampaign');
                     },
                   ),
                 ),
@@ -325,10 +334,19 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                 shrinkWrap: true,
                                 scrollDirection: Axis.vertical,
                                 children: [
-                                  wrapWithModel(
-                                    model: _model.campaignCardWideDraftModel1,
-                                    updateCallback: () => setState(() {}),
-                                    child: const CampaignCardWideDraftWidget(),
+                                  InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('CampaignPage');
+                                    },
+                                    child: wrapWithModel(
+                                      model: _model.campaignCardWideDraftModel1,
+                                      updateCallback: () => setState(() {}),
+                                      child: const CampaignCardWideDraftWidget(),
+                                    ),
                                   ),
                                   wrapWithModel(
                                     model: _model.campaignCardWideDraftModel2,
