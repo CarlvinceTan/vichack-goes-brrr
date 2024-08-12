@@ -100,10 +100,10 @@ class _CreateCampaignWidgetState extends State<CreateCampaignWidget>
             automaticallyImplyLeading: false,
             actions: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 8.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 16.0, 8.0),
                 child: FlutterFlowIconButton(
                   borderColor: FlutterFlowTheme.of(context).alternate,
-                  borderRadius: 12.0,
+                  borderRadius: 30.0,
                   borderWidth: 1.0,
                   buttonSize: 40.0,
                   fillColor: FlutterFlowTheme.of(context).secondaryBackground,
