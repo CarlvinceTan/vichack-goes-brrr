@@ -1,11 +1,9 @@
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_count_controller.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'create_campaign_model.dart';
 export 'create_campaign_model.dart';
@@ -17,13 +15,10 @@ class CreateCampaignWidget extends StatefulWidget {
   State<CreateCampaignWidget> createState() => _CreateCampaignWidgetState();
 }
 
-class _CreateCampaignWidgetState extends State<CreateCampaignWidget>
-    with TickerProviderStateMixin {
+class _CreateCampaignWidgetState extends State<CreateCampaignWidget> {
   late CreateCampaignModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
@@ -48,34 +43,6 @@ class _CreateCampaignWidgetState extends State<CreateCampaignWidget>
     _model.textFieldTextController5 ??= TextEditingController();
     _model.textFieldFocusNode5 ??= FocusNode();
     _model.textFieldFocusNode5!.addListener(() => setState(() {}));
-    animationsMap.addAll({
-      'containerOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 600.0.ms,
-            begin: const Offset(0.0, 110.0),
-            end: const Offset(0.0, 0.0),
-          ),
-        ],
-      ),
-    });
-    setupAnimations(
-      animationsMap.values.where((anim) =>
-          anim.trigger == AnimationTrigger.onActionTrigger ||
-          !anim.applyInitialState),
-      this,
-    );
-
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -449,8 +416,7 @@ class _CreateCampaignWidgetState extends State<CreateCampaignWidget>
                                         ],
                                       ),
                                     ),
-                                  ).animateOnPageLoad(animationsMap[
-                                      'containerOnPageLoadAnimation']!),
+                                  ),
                                   Divider(
                                     height: 2.0,
                                     thickness: 2.0,

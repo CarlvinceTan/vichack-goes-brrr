@@ -46,7 +46,7 @@ class _CampaignCardWidgetState extends State<CampaignCardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(30.0, 0.0),
+            begin: const Offset(60.0, 0.0),
             end: const Offset(0.0, 0.0),
           ),
         ],
@@ -159,16 +159,6 @@ class _CampaignCardWidgetState extends State<CampaignCardWidget>
                                   FlutterFlowTheme.of(context).primary,
                               backgroundColor:
                                   FlutterFlowTheme.of(context).alternate,
-                              center: Text(
-                                '50%',
-                                style: FlutterFlowTheme.of(context)
-                                    .headlineSmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      fontSize: 10.0,
-                                      letterSpacing: 0.0,
-                                    ),
-                              ),
                               barRadius: const Radius.circular(24.0),
                               padding: EdgeInsets.zero,
                             ),

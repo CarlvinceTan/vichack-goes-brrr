@@ -109,26 +109,6 @@ class _CampaignPageWidgetState extends State<CampaignPageWidget>
           ),
         ],
       ),
-      'containerOnPageLoadAnimation2': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          VisibilityEffect(duration: 1600.ms),
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 1600.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 1600.0.ms,
-            duration: 600.0.ms,
-            begin: const Offset(0.0, 70.0),
-            end: const Offset(0.0, 0.0),
-          ),
-        ],
-      ),
       'textOnPageLoadAnimation4': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
@@ -165,26 +145,6 @@ class _CampaignPageWidgetState extends State<CampaignPageWidget>
             delay: 180.0.ms,
             duration: 600.0.ms,
             begin: const Offset(20.0, 0.0),
-            end: const Offset(0.0, 0.0),
-          ),
-        ],
-      ),
-      'containerOnPageLoadAnimation3': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          VisibilityEffect(duration: 1600.ms),
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 1600.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 1600.0.ms,
-            duration: 600.0.ms,
-            begin: const Offset(0.0, 90.0),
             end: const Offset(0.0, 0.0),
           ),
         ],
@@ -229,7 +189,7 @@ class _CampaignPageWidgetState extends State<CampaignPageWidget>
           ),
         ],
       ),
-      'containerOnPageLoadAnimation4': AnimationInfo(
+      'containerOnPageLoadAnimation2': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           FadeEffect(
@@ -335,6 +295,27 @@ class _CampaignPageWidgetState extends State<CampaignPageWidget>
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 12.0, 0.0),
+                                      child: FlutterFlowIconButton(
+                                        borderColor: Colors.transparent,
+                                        borderRadius: 30.0,
+                                        borderWidth: 1.0,
+                                        buttonSize: 40.0,
+                                        fillColor: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        icon: Icon(
+                                          Icons.favorite_border,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          size: 20.0,
+                                        ),
+                                        onPressed: () {
+                                          print('IconButton pressed ...');
+                                        },
+                                      ),
+                                    ),
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 12.0, 0.0),
@@ -588,6 +569,19 @@ class _CampaignPageWidgetState extends State<CampaignPageWidget>
                                         ],
                                       ),
                                     ),
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 50.0, 16.0, 0.0),
+                                      child: Text(
+                                        '161,600,000',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -611,8 +605,7 @@ class _CampaignPageWidgetState extends State<CampaignPageWidget>
                             ],
                           ),
                         ),
-                      ).animateOnPageLoad(
-                          animationsMap['containerOnPageLoadAnimation2']!),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsetsDirectional.fromSTEB(
@@ -694,6 +687,19 @@ class _CampaignPageWidgetState extends State<CampaignPageWidget>
                                         ],
                                       ),
                                     ),
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 50.0, 16.0, 0.0),
+                                      child: Text(
+                                        '161,600,000',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -717,8 +723,7 @@ class _CampaignPageWidgetState extends State<CampaignPageWidget>
                             ],
                           ),
                         ),
-                      ).animateOnPageLoad(
-                          animationsMap['containerOnPageLoadAnimation3']!),
+                      ),
                     ),
                   ],
                 ),
@@ -811,7 +816,7 @@ class _CampaignPageWidgetState extends State<CampaignPageWidget>
                 ],
               ),
             ).animateOnPageLoad(
-                animationsMap['containerOnPageLoadAnimation4']!),
+                animationsMap['containerOnPageLoadAnimation2']!),
           ],
         ),
       ),

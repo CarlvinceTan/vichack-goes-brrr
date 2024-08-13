@@ -221,10 +221,19 @@ class _DashboardWidgetState extends State<DashboardWidget>
                       child: const CampaignCardWidget(),
                     ),
                   ),
-                  wrapWithModel(
-                    model: _model.campaignCardModel2,
-                    updateCallback: () => setState(() {}),
-                    child: const CampaignCardWidget(),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.pushNamed('CampaignPage');
+                    },
+                    child: wrapWithModel(
+                      model: _model.campaignCardModel2,
+                      updateCallback: () => setState(() {}),
+                      child: const CampaignCardWidget(),
+                    ),
                   ),
                 ],
               ),
